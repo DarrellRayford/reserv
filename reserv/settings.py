@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'reserv',
+    'resy',
 ]
 
 MIDDLEWARE = [
@@ -76,12 +77,12 @@ WSGI_APPLICATION = 'reserv.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE'  : 'django.db.backends.mysql',  
-        'NAME'    : 'reserv_db_project',                  
-        'USER'    : 'drayford',                     
+        'ENGINE'  : 'django.db.backends.sqlite3',  
+        'NAME'    : 'sqlite3.db',                  
+        'USER'    : '',                     
         'PASSWORD': '',              
-        'HOST'    : 'localhost',                
-        'PORT'    : '3306',
+        'HOST'    : '',                
+        'PORT'    : '',
     }
 }
 

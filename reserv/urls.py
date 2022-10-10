@@ -19,6 +19,8 @@ from reserv import views as reservViews
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', reservViews.home),
+    path('', reservViews.home, name='home'),
+    path('about/', reservViews.about, name='about'),
+    path('signup/', reservViews.signup, name='signup'),
 
 ]
