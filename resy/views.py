@@ -4,7 +4,12 @@ from django.http import HttpResponse
 
 def home(request):
     searchTerm = request.GET.get('searchReserv')
-    return render(request, 'home.html', {'searchTerm':searchTerm})
+    if searchTerm:
+        resy = Resy.objects.filter(title__icontains=searchTerm)
+    else:
+        resy = Resy.objects.all()
+    return render(request, 'home.html', 
+    {'searchTerm' : searchTerm, 'restVenues' : resyVenues})
 
 def about(request):
     return render(request, 'about.html')
