@@ -9,7 +9,7 @@ def home(request):
     else:
         resy = Resy.objects.all()
     return render(request, 'home.html', 
-    {'searchTerm' : searchTerm, 'restVenues' : resyVenues})
+    {'searchTerm' : searchTerm, 'resyVenues' : resyVenues})
 
 def about(request):
     return render(request, 'about.html')
