@@ -24,7 +24,7 @@ urlpatterns = [
     path('', reservViews.home, name='home'),
     path('about/', reservViews.about, name='about'),
     path('signup/', reservViews.signup, name='signup'),
-    path('accounts/', include('acccounts.urls')),
+    path('accounts/', include('accounts.urls')),
 
 ]
 
